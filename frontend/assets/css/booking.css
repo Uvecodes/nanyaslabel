@@ -1,0 +1,608 @@
+/* =============================================
+   NANYA'S LABEL — Booking Page Styles
+   ============================================= */
+
+.booking-page { background: var(--clr-cream2); }
+
+/* --- BOOKING HERO --- */
+.booking-hero {
+  background:
+    linear-gradient(135deg, rgba(15,30,22,.92) 0%, rgba(23,43,31,.78) 100%),
+    url('../Stylish\ Off-Shoulder\ African\ Print\ Midi\ Dress\ _\ Elegant\ Party\ Outfit\ _\ baby\ bambino\ design.jpg') center/cover no-repeat;
+  padding: 10rem 2rem 5rem;
+  text-align: center;
+}
+.booking-hero-text { max-width: 600px; margin-inline: auto; }
+.booking-hero-title {
+  font-family: var(--ff-display);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--clr-white);
+  margin-bottom: 1rem;
+}
+.booking-hero-sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,.7);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* --- BOOKING MAIN --- */
+.booking-main {
+  padding: 4rem 0 6rem;
+}
+
+/* --- STEPS INDICATOR --- */
+.steps-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+}
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .4rem;
+}
+.step-num {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .85rem;
+  font-weight: 600;
+  border: 2px solid rgba(44,122,82,.3);
+  color: var(--clr-muted);
+  background: var(--clr-white);
+  transition: border-color .3s, background .3s, color .3s;
+}
+.step p {
+  font-size: .7rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--clr-muted);
+  transition: color .3s;
+}
+.step.active .step-num {
+  background: var(--clr-tan);
+  border-color: var(--clr-tan);
+  color: var(--clr-white);
+}
+.step.active p { color: var(--clr-tan); }
+.step.done .step-num {
+  background: var(--clr-mid);
+  border-color: var(--clr-mid);
+  color: var(--clr-white);
+}
+.step-line {
+  height: 2px;
+  width: 80px;
+  background: rgba(44,122,82,.25);
+  align-self: flex-start;
+  margin-top: 17px;
+  margin-inline: 4px;
+  transition: background .3s;
+  flex-shrink: 0;
+}
+.step-line.done { background: var(--clr-tan); }
+
+/* --- BOOKING STEP --- */
+.booking-step {
+  max-width: 900px;
+  margin-inline: auto;
+  animation: fadeUp .5s var(--ease-out) both;
+}
+.booking-step.hidden { display: none; }
+
+.step-title {
+  font-family: var(--ff-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: var(--clr-dark);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* --- SERVICES GRID --- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.service-option { cursor: pointer; }
+.service-option input[type="radio"] { display: none; }
+
+.service-option-body {
+  background: var(--clr-white);
+  border: 2px solid transparent;
+  border-radius: calc(var(--radius) * 1.5);
+  padding: 1.5rem;
+  transition: border-color .25s, box-shadow .25s, transform .25s var(--ease-out);
+  height: 100%;
+}
+.service-option:hover .service-option-body {
+  border-color: rgba(44,122,82,.4);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+.service-option input:checked + .service-option-body {
+  border-color: var(--clr-tan);
+  box-shadow: 0 0 0 3px rgba(44,122,82,.15);
+}
+
+.service-option-icon {
+  font-size: 1.75rem;
+  display: block;
+  margin-bottom: .75rem;
+}
+.service-option-body h3 {
+  font-family: var(--ff-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--clr-dark);
+  margin-bottom: .35rem;
+}
+.service-option-body p {
+  font-size: .82rem;
+  color: var(--clr-muted);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.service-option-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--clr-tan);
+  letter-spacing: .05em;
+}
+
+/* --- CALENDAR --- */
+.calendar-time-wrapper {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.calendar-wrapper {
+  background: var(--clr-white);
+  border-radius: calc(var(--radius) * 2);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+.cal-nav {
+  width: 36px; height: 36px;
+  border: 1px solid rgba(44,122,82,.3);
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: var(--clr-tan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .2s, border-color .2s;
+  line-height: 1;
+}
+.cal-nav:hover { background: var(--clr-cream); border-color: var(--clr-tan); }
+
+.cal-month-year {
+  font-family: var(--ff-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--clr-dark);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  margin-bottom: 4px;
+}
+.cal-day-name {
+  text-align: center;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  color: var(--clr-muted);
+  padding: .4rem 0;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.cal-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: .82rem;
+  font-weight: 500;
+  cursor: default;
+  color: var(--clr-muted);
+  transition: background .2s, color .2s, transform .15s;
+  border: 2px solid transparent;
+}
+.cal-day.empty { pointer-events: none; }
+.cal-day.past {
+  color: rgba(27,94,55,.3);
+  cursor: not-allowed;
+}
+.cal-day.available {
+  color: var(--clr-dark);
+  cursor: pointer;
+  background: rgba(44,122,82,.08);
+}
+.cal-day.available:hover {
+  background: var(--clr-tan);
+  color: var(--clr-white);
+  transform: scale(1.1);
+}
+.cal-day.full {
+  color: var(--clr-muted);
+  text-decoration: line-through;
+  cursor: not-allowed;
+  opacity: .5;
+}
+.cal-day.selected {
+  background: var(--clr-tan) !important;
+  color: var(--clr-white) !important;
+  border-color: var(--clr-mid);
+  transform: scale(1.1);
+}
+.cal-day.today {
+  border-color: var(--clr-tan);
+}
+
+.calendar-legend {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: .72rem;
+  color: var(--clr-muted);
+  flex-wrap: wrap;
+}
+.legend-dot {
+  display: inline-block;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  margin-right: .25rem;
+}
+.legend-dot--available { background: rgba(44,122,82,.4); }
+.legend-dot--full { background: rgba(27,94,55,.2); }
+.legend-dot--unavailable { background: rgba(27,94,55,.1); }
+
+/* --- TIME SLOTS --- */
+.time-slots-wrapper {
+  background: var(--clr-white);
+  border-radius: calc(var(--radius) * 2);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+.time-slots-placeholder {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-muted);
+  font-size: .9rem;
+  opacity: .6;
+  text-align: center;
+  min-height: 200px;
+}
+.time-slots-date {
+  font-family: var(--ff-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--clr-dark);
+  margin-bottom: 1.25rem;
+}
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: .6rem;
+}
+.time-slot {
+  padding: .6rem .5rem;
+  border: 1.5px solid rgba(44,122,82,.3);
+  border-radius: var(--radius);
+  text-align: center;
+  font-size: .8rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--clr-dark);
+  transition: border-color .2s, background .2s, color .2s, transform .15s;
+}
+.time-slot:hover {
+  border-color: var(--clr-tan);
+  background: rgba(44,122,82,.08);
+  transform: translateY(-2px);
+}
+.time-slot.booked {
+  background: rgba(27,94,55,.05);
+  color: rgba(27,94,55,.35);
+  cursor: not-allowed;
+  text-decoration: line-through;
+  border-color: transparent;
+}
+.time-slot.selected {
+  background: var(--clr-tan);
+  border-color: var(--clr-tan);
+  color: var(--clr-white);
+}
+
+/* --- BOOKING FORM --- */
+.booking-form {
+  background: var(--clr-white);
+  border-radius: calc(var(--radius) * 2);
+  padding: 2rem 2.5rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 2.5rem;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  margin-bottom: 1.2rem;
+}
+.form-group label {
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--clr-mid);
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: .85rem 1rem;
+  border: 1.5px solid rgba(44,122,82,.25);
+  border-radius: var(--radius);
+  font-family: var(--ff-body);
+  font-size: .9rem;
+  color: var(--clr-dark);
+  background: var(--clr-cream2);
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--clr-tan);
+  box-shadow: 0 0 0 3px rgba(44,122,82,.12);
+}
+.form-group input.error { border-color: #c0392b; }
+.form-group textarea { resize: vertical; }
+.form-group--check {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: .75rem;
+}
+.form-group--check input[type="checkbox"] {
+  width: 18px; height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  accent-color: var(--clr-tan);
+}
+.form-group--check label {
+  font-size: .82rem;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: var(--clr-muted);
+}
+.form-group--check label a { color: var(--clr-tan); text-decoration: underline; }
+
+/* --- SUMMARY CARD --- */
+.summary-card {
+  background: var(--clr-white);
+  border-radius: calc(var(--radius) * 2);
+  padding: 2rem 2.5rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1.5rem;
+}
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .75rem 0;
+}
+.summary-label {
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--clr-muted);
+}
+.summary-value {
+  font-size: .92rem;
+  font-weight: 500;
+  color: var(--clr-dark);
+  text-align: right;
+}
+.summary-divider {
+  height: 1px;
+  background: rgba(44,122,82,.2);
+  margin: .5rem 0;
+}
+.confirm-note {
+  font-size: .85rem;
+  color: var(--clr-muted);
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* --- SUCCESS --- */
+.success-card {
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 500px;
+  margin-inline: auto;
+}
+.success-icon {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: var(--clr-tan);
+  color: var(--clr-white);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 8px 24px rgba(44,122,82,.35);
+}
+.success-card h2 {
+  font-family: var(--ff-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--clr-dark);
+  margin-bottom: .75rem;
+}
+.success-card p {
+  color: var(--clr-muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+.success-summary {
+  background: var(--clr-cream);
+  border-radius: var(--radius);
+  padding: 1rem 1.5rem;
+  font-size: .875rem;
+  color: var(--clr-mid);
+  margin-bottom: 2rem;
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* --- STEP NAV --- */
+.step-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+.step-nav .btn-ghost {
+  color: var(--clr-muted);
+  border-color: rgba(27,94,55,.25);
+}
+.step-nav .btn-ghost:hover { border-color: var(--clr-muted); color: var(--clr-dark); }
+
+/* --- HIDDEN UTIL --- */
+.hidden { display: none !important; }
+
+/* --- RESPONSIVE --- */
+
+/* -- Tablet (≤ 900px): stack calendar --- */
+@media (max-width: 900px) {
+  .calendar-time-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .time-slots-wrapper { min-height: 200px; }
+}
+
+/* -- Mobile (≤ 768px): compact booking --- */
+@media (max-width: 768px) {
+  .booking-hero { padding: 8rem 1.5rem 3.5rem; }
+
+  /* Steps: shrink connecting lines */
+  .step-line { width: 40px; }
+  .step p { font-size: .62rem; }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  .booking-form { padding: 1.5rem; }
+  .summary-card { padding: 1.5rem; }
+
+  /* Step nav: wrap buttons so they stack if needed */
+  .step-nav { flex-wrap: wrap; }
+  .step-nav .btn { flex: 1 1 140px; justify-content: center; }
+}
+
+/* -- Small mobile (≤ 580px): full single-column --- */
+@media (max-width: 580px) {
+  /* Steps indicator: hide labels, shrink lines */
+  .step p { display: none; }
+  .step-line { width: 24px; }
+  .steps-indicator { gap: 0; margin-bottom: 2.5rem; }
+
+  /* Services: 1 column */
+  .services-grid { grid-template-columns: 1fr; }
+
+  /* Form: single column */
+  .form-row { grid-template-columns: 1fr; }
+
+  /* Summary: let value wrap below label on tiny screens */
+  .summary-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .2rem;
+    padding: .6rem 0;
+  }
+  .summary-value { text-align: left; font-size: .85rem; }
+
+  /* Booking step nav: full-width stacked buttons */
+  .step-nav { flex-direction: column; }
+  .step-nav .btn { width: 100%; }
+
+  /* Time slots: 3 columns */
+  .slots-grid { grid-template-columns: repeat(3, 1fr); }
+
+  /* Calendar: reduce padding */
+  .calendar-wrapper { padding: 1rem; }
+  .cal-day { font-size: .75rem; }
+}
+
+/* -- Very small screens (≤ 400px): micro-adjustments --- */
+@media (max-width: 400px) {
+  .booking-hero { padding: 7rem 1.25rem 2.5rem; }
+  .booking-hero-title { font-size: clamp(1.8rem, 10vw, 2.5rem); }
+  .booking-hero-sub { font-size: .88rem; }
+
+  /* 2-col time slots so they aren't too cramped */
+  .slots-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Tighter calendar */
+  .calendar-wrapper { padding: .75rem; }
+  .cal-day { font-size: .7rem; }
+  .cal-day-name { font-size: .62rem; }
+  .cal-month-year { font-size: .95rem; }
+
+  /* Compact form & summary */
+  .booking-form { padding: 1.25rem 1rem; }
+  .summary-card { padding: 1.25rem 1rem; }
+
+  /* Step lines even shorter */
+  .step-line { width: 16px; }
+  .step-num { width: 30px; height: 30px; font-size: .78rem; }
+}

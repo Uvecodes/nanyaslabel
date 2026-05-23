@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Appointment — Nanya's Label</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/booking.css" />
+</head>
+<body class="booking-page">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar--solid" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Nanya's Label</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#home" class="nav-link">Home</a></li>
+        <li><a href="booking.html" class="nav-link nav-cta active">Book A Fitting</a></li>
+        <li><a href="index.html#collection" class="nav-link">Collection</a></li>
+        <!-- <li><a href="index.html#about" class="nav-link">About</a></li> -->
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BOOKING HERO -->
+  <section class="booking-hero">
+    <div class="booking-hero-text">
+      <p class="section-eyebrow">Schedule Your Visit</p>
+      <h1 class="booking-hero-title">Book a<br /><em>Fitting</em></h1>
+      <p class="booking-hero-sub">Choose your service, pick a date that works for you, and we'll handle the rest.</p>
+    </div>
+  </section>
+
+  <!-- BOOKING STEPS -->
+  <section class="booking-main">
+    <div class="container">
+
+      <!-- STEP INDICATOR -->
+      <div class="steps-indicator">
+        <div class="step active" id="step-dot-1">
+          <div class="step-num">1</div>
+          <p>Service</p>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" id="step-dot-2">
+          <div class="step-num">2</div>
+          <p>Date &amp; Time</p>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" id="step-dot-3">
+          <div class="step-num">3</div>
+          <p>Your Details</p>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" id="step-dot-4">
+          <div class="step-num">4</div>
+          <p>Confirm</p>
+        </div>
+      </div>
+
+      <!-- STEP 1: SERVICE SELECTION -->
+      <div class="booking-step" id="step-1">
+        <h2 class="step-title">Choose Your Service</h2>
+        <div class="services-grid">
+          <label class="service-option">
+            <input type="radio" name="service" value="Custom Dress Design" data-price="From ₦75,000" data-duration="2–4 hrs" />
+            <div class="service-option-body">
+              <span class="service-option-icon">✂️</span>
+              <h3>Custom Dress Design</h3>
+              <p>One-of-a-kind pieces tailored to your vision</p>
+              <div class="service-option-meta">
+                <span>From ₦75,000</span>
+                <span>2–4 hrs</span>
+              </div>
+            </div>
+          </label>
+          <label class="service-option">
+            <input type="radio" name="service" value="Bridal Couture" data-price="From ₦250,000" data-duration="4–8 hrs" />
+            <div class="service-option-body">
+              <span class="service-option-icon">👗</span>
+              <h3>Bridal Couture</h3>
+              <p>Your dream wedding look, made by hand</p>
+              <div class="service-option-meta">
+                <span>From ₦250,000</span>
+                <span>4–8 hrs</span>
+              </div>
+            </div>
+          </label>
+          <label class="service-option">
+            <input type="radio" name="service" value="Alterations & Repairs" data-price="From ₦15,000" data-duration="1–2 hrs" />
+            <div class="service-option-body">
+              <span class="service-option-icon">🪡</span>
+              <h3>Alterations &amp; Repairs</h3>
+              <p>Expert adjustments for the perfect fit</p>
+              <div class="service-option-meta">
+                <span>From ₦15,000</span>
+                <span>1–2 hrs</span>
+              </div>
+            </div>
+          </label>
+          <label class="service-option">
+            <input type="radio" name="service" value="Traditional Attire" data-price="From ₦80,000" data-duration="3–5 hrs" />
+            <div class="service-option-body">
+              <span class="service-option-icon">🌍</span>
+              <h3>Traditional Attire</h3>
+              <p>Cultural garments with a modern touch</p>
+              <div class="service-option-meta">
+                <span>From ₦80,000</span>
+                <span>3–5 hrs</span>
+              </div>
+            </div>
+          </label>
+          <label class="service-option">
+            <input type="radio" name="service" value="Ready-to-Wear Fitting" data-price="From ₦45,000" data-duration="1–1.5 hrs" />
+            <div class="service-option-body">
+              <span class="service-option-icon">🛍️</span>
+              <h3>Ready-to-Wear Fitting</h3>
+              <p>Collection pieces tailored to your body</p>
+              <div class="service-option-meta">
+                <span>From ₦45,000</span>
+                <span>1–1.5 hrs</span>
+              </div>
+            </div>
+          </label>
+          <label class="service-option">
+            <input type="radio" name="service" value="Corporate & Business Wear" data-price="From ₦65,000" data-duration="2–3 hrs" />
+            <div class="service-option-body">
+              <span class="service-option-icon">👔</span>
+              <h3>Corporate &amp; Business Wear</h3>
+              <p>Sharp, polished executive tailoring</p>
+              <div class="service-option-meta">
+                <span>From ₦65,000</span>
+                <span>2–3 hrs</span>
+              </div>
+            </div>
+          </label>
+        </div>
+        <div class="step-nav">
+          <button class="btn btn-primary" id="next-1" disabled>Continue →</button>
+        </div>
+      </div>
+
+      <!-- STEP 2: DATE & TIME -->
+      <div class="booking-step hidden" id="step-2">
+        <h2 class="step-title">Pick a Date &amp; Time</h2>
+        <div class="calendar-time-wrapper">
+
+          <!-- CALENDAR -->
+          <div class="calendar-wrapper">
+            <div class="calendar-header">
+              <button class="cal-nav" id="cal-prev" aria-label="Previous month">&#8249;</button>
+              <div class="cal-month-year" id="cal-month-year"></div>
+              <button class="cal-nav" id="cal-next" aria-label="Next month">&#8250;</button>
+            </div>
+            <div class="calendar-grid">
+              <div class="cal-day-name">Su</div>
+              <div class="cal-day-name">Mo</div>
+              <div class="cal-day-name">Tu</div>
+              <div class="cal-day-name">We</div>
+              <div class="cal-day-name">Th</div>
+              <div class="cal-day-name">Fr</div>
+              <div class="cal-day-name">Sa</div>
+            </div>
+            <div class="calendar-days" id="calendar-days"></div>
+            <div class="calendar-legend">
+              <span class="legend-dot legend-dot--available"></span><span>Available</span>
+              <span class="legend-dot legend-dot--full"></span><span>Fully Booked</span>
+              <span class="legend-dot legend-dot--unavailable"></span><span>Unavailable</span>
+            </div>
+          </div>
+
+          <!-- TIME SLOTS -->
+          <div class="time-slots-wrapper">
+            <div class="time-slots-placeholder" id="time-slots-placeholder">
+              <p>← Select a date to see available times</p>
+            </div>
+            <div class="time-slots hidden" id="time-slots">
+              <h3 class="time-slots-date" id="time-slots-date"></h3>
+              <div class="slots-grid" id="slots-grid"></div>
+            </div>
+          </div>
+
+        </div>
+        <div class="step-nav">
+          <button class="btn btn-ghost" id="back-2">← Back</button>
+          <button class="btn btn-primary" id="next-2" disabled>Continue →</button>
+        </div>
+      </div>
+
+      <!-- STEP 3: USER DETAILS -->
+      <div class="booking-step hidden" id="step-3">
+        <h2 class="step-title">Your Details</h2>
+        <form class="booking-form" id="booking-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name *</label>
+              <input type="text" id="first-name" name="firstName" placeholder="Nanya" required />
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name *</label>
+              <input type="text" id="last-name" name="lastName" placeholder="Okafor" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" required />
+          </div>
+          <div class="form-group">
+            <label for="notes">Additional Notes</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Any style preferences, measurements, fabric choices, or questions…"></textarea>
+          </div>
+          <div class="form-group form-group--check">
+            <input type="checkbox" id="agree" name="agree" required />
+            <label for="agree">I agree to the <a href="#">cancellation policy</a> — 24hr notice required.</label>
+          </div>
+        </form>
+        <div class="step-nav">
+          <button class="btn btn-ghost" id="back-3">← Back</button>
+          <button class="btn btn-primary" id="next-3">Review Booking →</button>
+        </div>
+      </div>
+
+      <!-- STEP 4: CONFIRM -->
+      <div class="booking-step hidden" id="step-4">
+        <h2 class="step-title">Review &amp; Confirm</h2>
+        <div class="summary-card">
+          <div class="summary-row">
+            <span class="summary-label">Service</span>
+            <span class="summary-value" id="sum-service"></span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">Starting Price</span>
+            <span class="summary-value" id="sum-price"></span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">Duration</span>
+            <span class="summary-value" id="sum-duration"></span>
+          </div>
+          <div class="summary-divider"></div>
+          <div class="summary-row">
+            <span class="summary-label">Date</span>
+            <span class="summary-value" id="sum-date"></span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">Time</span>
+            <span class="summary-value" id="sum-time"></span>
+          </div>
+          <div class="summary-divider"></div>
+          <div class="summary-row">
+            <span class="summary-label">Name</span>
+            <span class="summary-value" id="sum-name"></span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">Email</span>
+            <span class="summary-value" id="sum-email"></span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">Phone</span>
+            <span class="summary-value" id="sum-phone"></span>
+          </div>
+        </div>
+        <p class="confirm-note">A confirmation will be sent to your email. We'll be in touch to finalise details.</p>
+        <div class="step-nav">
+          <button class="btn btn-ghost" id="back-4">← Back</button>
+          <button class="btn btn-primary" id="confirm-btn">Confirm Appointment ✓</button>
+        </div>
+      </div>
+
+      <!-- SUCCESS -->
+      <div class="booking-step hidden" id="step-success">
+        <div class="success-card">
+          <div class="success-icon">✓</div>
+          <h2>You're Booked!</h2>
+          <p>Thank you! Your appointment has been received. Check your email for a confirmation.</p>
+          <div class="success-summary" id="success-summary"></div>
+          <a href="index.html" class="btn btn-primary">Back to Home</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner container">
+      <div class="footer-brand">
+        <span class="footer-logo">Nanya's Label</span>
+        <p>Bespoke fashion studio. Crafting style, one stitch at a time.</p>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>hello@nanyaslabel.com</p>
+        <p>+1 (555) 012-3456</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Nanya's Label. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/booking.js"></script>
+</body>
+</html>
